@@ -1,11 +1,61 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-
 export default function HeroSection() {
-  return (
-    <div className="flex flex-col items-center gap-24 px-6 md:gap-28 md:px-8 md:pt-8">
-      <div className="flex w-full max-w-4xl flex-col justify-center py-8 md:py-0">
+  return <div className="px-[6px] flex flex-col items-center gap-24 md:gap-28 md:px-8 md:pt-8">The Unified
+Interface For LLMs
+
+Better prices, better uptime, no subscription.
+
+Featured Models
+View Trending
+Gemini 2.5 Pro
+by google
+
+114.5B
+
+Tokens/wk
+
+2.6s
+
+Latency
+
++131.79%
+
+Weekly growth
+
+GPT-4.1
+by openai
+
+33.3B
+
+Tokens/wk
+
+385ms
+
+Latency
+
+-11.39%
+
+Weekly growth
+
+Claude Sonnet 4
+by anthropic
+
+291.0B
+
+Tokens/wk
+
+2.2s
+
+Latency
+
+-13.99%
+
+Weekly growth
+
+Featured Models
+View Trending<div className="flex w-full max-w-4xl flex-col justify-center py-8 md:py-0">
         <div className="mb-3 flex flex-col gap-2 md:-mb-48 md:gap-1">
           <h1 className="my-0 w-full py-0 text-5xl font-semibold">
             <span className="mb-1 hidden md:block">The Unified</span>
@@ -42,11 +92,7 @@ export default function HeroSection() {
             </div>
             
             <div className="flex w-full items-center justify-between gap-3 flex-row">
-              <Input 
-                className="w-full appearance-none py-2 transition duration-150 ease-in-out placeholder:text-foreground/30 shadow-border focus:shadow-inner focus:outline-none text-muted-foreground bg-background focus:bg-background/80 h-10 flex-1 rounded-lg border-0 px-4"
-                placeholder="Start a message..."
-                type="text"
-              />
+              <Input className="w-full appearance-none py-2 transition duration-150 ease-in-out placeholder:text-foreground/30 shadow-border focus:shadow-inner focus:outline-none text-muted-foreground bg-background focus:bg-background/80 h-10 flex-1 rounded-lg border-0 px-4" placeholder="Start a message..." type="text" />
               <Button className="inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 bg-primary text-primary-foreground shadow hover:bg-primary/90 py-4 group aspect-square h-10 px-3 transition-colors md:aspect-auto md:flex-shrink-0">
                 <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
               </Button>
@@ -57,13 +103,10 @@ export default function HeroSection() {
           <FeaturedModels />
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }
-
 function FeaturedModels() {
-  return (
-    <div className="w-full min-w-80 space-y-3 md:w-auto">
+  return <div className="w-full min-w-80 space-y-3 md:w-auto">
       {/* Mobile routing curves */}
       <div className="block md:hidden">
         <svg width="100%" className="h-10" viewBox="0 0 320 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -87,16 +130,7 @@ function FeaturedModels() {
           <ProviderButton imageSrc="https://openrouter.ai/images/icons/Anthropic.svg" alt="Anthropic" />
         </div>
 
-        <ModelCard 
-          name="GPT-4.1"
-          provider="openai"
-          imageSrc="https://openrouter.ai/images/icons/OpenAI.svg"
-          tokens="33.3B"
-          latency="385ms"
-          growth="-11.39%"
-          growthType="negative"
-          featured
-        />
+        <ModelCard name="GPT-4.1" provider="openai" imageSrc="https://openrouter.ai/images/icons/OpenAI.svg" tokens="33.3B" latency="385ms" growth="-11.39%" growthType="negative" featured />
       </div>
 
       {/* Desktop models */}
@@ -109,36 +143,11 @@ function FeaturedModels() {
           </Button>
         </div>
 
-        <ModelCard 
-          name="Gemini 2.5 Pro"
-          provider="google"
-          imageSrc="https://openrouter.ai/images/icons/GoogleGemini.svg"
-          tokens="114.5B"
-          latency="2.6s"
-          growth="+131.79%"
-          growthType="positive"
-        />
+        <ModelCard name="Gemini 2.5 Pro" provider="google" imageSrc="https://openrouter.ai/images/icons/GoogleGemini.svg" tokens="114.5B" latency="2.6s" growth="+131.79%" growthType="positive" />
 
-        <ModelCard 
-          name="GPT-4.1"
-          provider="openai"
-          imageSrc="https://openrouter.ai/images/icons/OpenAI.svg"
-          tokens="33.3B"
-          latency="385ms"
-          growth="-11.39%"
-          growthType="negative"
-          featured
-        />
+        <ModelCard name="GPT-4.1" provider="openai" imageSrc="https://openrouter.ai/images/icons/OpenAI.svg" tokens="33.3B" latency="385ms" growth="-11.39%" growthType="negative" featured />
 
-        <ModelCard 
-          name="Claude Sonnet 4"
-          provider="anthropic"
-          imageSrc="https://openrouter.ai/images/icons/Anthropic.svg"
-          tokens="291.0B"
-          latency="2.2s"
-          growth="-13.99%"
-          growthType="negative"
-        />
+        <ModelCard name="Claude Sonnet 4" provider="anthropic" imageSrc="https://openrouter.ai/images/icons/Anthropic.svg" tokens="291.0B" latency="2.2s" growth="-13.99%" growthType="negative" />
       </div>
 
       <div className="flex items-center justify-between px-2 pt-4">
@@ -148,31 +157,34 @@ function FeaturedModels() {
           <ArrowRight className="inline-block ml-px size-3" />
         </a>
       </div>
-    </div>
-  );
+    </div>;
 }
-
-function ProviderButton({ imageSrc, alt, invert }: { imageSrc: string; alt: string; invert?: boolean }) {
-  return (
-    <button className="whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 text-muted-foreground hover:bg-accent hover:text-accent-foreground h-11 flex items-center justify-center rounded-lg p-4">
+function ProviderButton({
+  imageSrc,
+  alt,
+  invert
+}: {
+  imageSrc: string;
+  alt: string;
+  invert?: boolean;
+}) {
+  return <button className="whitespace-nowrap font-medium transition-colors focus-visible:outline-none disabled:pointer-events-none disabled:opacity-50 focus-visible:ring-1 focus-visible:ring-ring gap-2 leading-6 text-muted-foreground hover:bg-accent hover:text-accent-foreground h-11 flex items-center justify-center rounded-lg p-4">
       <div className="flex items-center justify-center flex-shrink-0 rounded-full border border-border/50 shadow bg-muted p-0.5 size-8 transition-transform group-hover:scale-110 group-hover:rotate-12">
         <div className={`overflow-hidden rounded-full ${invert ? 'dark:invert' : ''}`}>
           <img width="256" height="256" alt={alt} className="h-full w-full object-cover" src={imageSrc} />
         </div>
       </div>
-    </button>
-  );
+    </button>;
 }
-
-function ModelCard({ 
-  name, 
-  provider, 
-  imageSrc, 
-  tokens, 
-  latency, 
-  growth, 
-  growthType, 
-  featured 
+function ModelCard({
+  name,
+  provider,
+  imageSrc,
+  tokens,
+  latency,
+  growth,
+  growthType,
+  featured
 }: {
   name: string;
   provider: string;
@@ -183,8 +195,7 @@ function ModelCard({
   growthType: 'positive' | 'negative';
   featured?: boolean;
 }) {
-  return (
-    <div className={`group/card text-card-foreground transition-all duration-200 hover:text-slate-12 hover:shadow-lg group bg-background rounded-lg border p-4 shadow-sm hover:border-primary ${featured ? 'md:border-primary' : 'border-slate-6'}`}>
+  return <div className={`group/card text-card-foreground transition-all duration-200 hover:text-slate-12 hover:shadow-lg group bg-background rounded-lg border p-4 shadow-sm hover:border-primary ${featured ? 'md:border-primary' : 'border-slate-6'}`}>
       <div className="space-y-2">
         <div>
           <a className="hover:underline" href="#">
@@ -222,6 +233,5 @@ function ModelCard({
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }
