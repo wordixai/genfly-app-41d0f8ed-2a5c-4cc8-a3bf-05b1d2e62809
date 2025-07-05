@@ -13,7 +13,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 216 100% 50%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -35,20 +35,27 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --slate-1: 210 40% 98%;
+    --slate-6: 215.4 16.3% 56.9%;
+    --slate-7: 215.3 19.3% 34.5%;
+    --slate-8: 215 25% 26.7%;
+    --slate-10: 215 16.3% 46.9%;
+    --slate-11: 215.4 16.3% 46.9%;
+    --slate-12: 224 71.4% 4.1%;
+
+    --green-3: 146 64% 94%;
+    --green-9: 151 55% 41.5%;
+    --green-10: 151 55% 41.5%;
+
+    --red-10: 0 84.2% 60.2%;
   }
 
   .dark {
@@ -61,7 +68,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 216 100% 50%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -96,6 +103,111 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
+}
+
+/* Custom utilities for OpenRouter styling */
+.text-slate-11 {
+  color: hsl(var(--slate-11));
+}
+
+.text-slate-10 {
+  color: hsl(var(--slate-10));
+}
+
+.text-slate-8 {
+  color: hsl(var(--slate-8));
+}
+
+.text-slate-7 {
+  color: hsl(var(--slate-7));
+}
+
+.text-slate-6 {
+  color: hsl(var(--slate-6));
+}
+
+.text-slate-12 {
+  color: hsl(var(--slate-12));
+}
+
+.border-slate-6 {
+  border-color: hsl(var(--slate-6));
+}
+
+.border-slate-7 {
+  border-color: hsl(var(--slate-7));
+}
+
+.hover\:border-slate-7:hover {
+  border-color: hsl(var(--slate-7));
+}
+
+.hover\:text-slate-12:hover {
+  color: hsl(var(--slate-12));
+}
+
+.hover\:shadow-slate-6:hover {
+  --tw-shadow-color: hsl(var(--slate-6));
+  box-shadow: var(--tw-shadow-colored);
+}
+
+.bg-slate-1 {
+  background-color: hsl(var(--slate-1));
+}
+
+.from-slate-1 {
+  --tw-gradient-from: hsl(var(--slate-1));
+}
+
+.to-slate-1 {
+  --tw-gradient-to: hsl(var(--slate-1));
+}
+
+.text-green-10 {
+  color: hsl(var(--green-10));
+}
+
+.text-red-10 {
+  color: hsl(var(--red-10));
+}
+
+.bg-green-3 {
+  background-color: hsl(var(--green-3));
+}
+
+.text-green-9 {
+  color: hsl(var(--green-9));
+}
+
+/* Animation keyframes */
+@keyframes float0 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(-3deg); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(7deg); }
+}
+
+@keyframes float3 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(-5deg); }
+}
+
+@keyframes float4 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-14px) rotate(3deg); }
+}
+
+@keyframes float5 {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-9px) rotate(-7deg); }
 }
